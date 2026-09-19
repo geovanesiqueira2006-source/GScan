@@ -21,16 +21,27 @@ else:
         print(f"Usuario: {usuario}")
         print(f"Repositório: {repositorio_nome}")
 
+         # Abre o arquivo para leitura
+        arquivo = open ("teste1.py", "r" )
+
+        # Lê o conteúdo do arquivo
+        codigo = arquivo.read()
+
+        # Fecha comando         
+        arquivo.close()
+
+        print(codigo)
         print("Iniciando análise...")
 
-# Verifica se existe uma possível informação sensível
-        codigo = "minha senha é 123456"
-
         if "senha" in codigo:
-         print("Risco encontrado!")
+            print (" Risco Encontrado!!")
+
+
+        
 
     else:
         print("Endereço de repositório inválido")
+        
         
 
         
